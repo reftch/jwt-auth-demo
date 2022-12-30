@@ -36,7 +36,7 @@ Use the keytool command as below. You could mention the certificate name that yo
 keytool -genkeypair -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore reftch-ssl-key.p12 -validity 3650
 ```
 
-### Applying the SSL to Spring Boot Application
+### Applying the SSL to API
 
 - Copy the reftch-ssl-key from the JDK bin folder and place it under the api/src/main/resources/ssl on your Spring Boot Application.
 - Add the SSL Key information into application.properties as shown below.
