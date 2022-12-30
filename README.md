@@ -48,3 +48,21 @@ server.ssl.key-store=classpath:ssl/reftch-ssl-key.p12
 server.ssl.key-store-type=PKCS12
 ```
 
+
+### Building and running application
+
+You build and test application by:
+```
+mvn clean install
+```
+Then, application is ready to run:
+```
+java -jar api/target/api-1.0.0-SNAPSHOT.jar
+```
+
+![](images/login.png)
+
+Enter demo credentials (admin/asdmin):
+
+![](images/home.png)
+
