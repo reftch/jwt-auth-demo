@@ -30,3 +30,21 @@ Now, we have secured Spring Boot REST APIs using JSON Web Tokens (JWT).
 ![](images/jwt.drawio.png)
 
 
+### How to Generate Self-Signed Certificate
+Use the keytool command as below. You could mention the certificate name that you want, shown below.
+```
+keytool -genkeypair -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore reftch-ssl-key.p12 -validity 3650
+```
+
+### Applying the SSL to Spring Boot Application
+
+- Copy the reftch-ssl-key from the JDK bin folder and place it under the api/src/main/resources/ssl on your Spring Boot Application.
+- Add the SSL Key information into application.properties as shown below.
+```
+# SSL Key Info
+security.require-ssl=true
+server.ssl.key-store-password=password
+server.ssl.key-store=classpath:ssl/reftch-ssl-key.p12
+server.ssl.key-store-type=PKCS12
+```
+

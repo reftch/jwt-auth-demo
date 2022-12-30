@@ -48,6 +48,16 @@ public class HomeControllerTests {
     }
 
     @Test
+    void indexWhenUnauthenticatedThen200() throws Exception {
+        this.mvc.perform(get("/index.html")).andExpect(status().isOk());
+    }
+
+    @Test
+    void assetsWhenUnauthenticatedThen200() throws Exception {
+        this.mvc.perform(get("/assets")).andExpect(status().isOk());
+    }
+
+    @Test
     @WithMockUser
     public void rootWithMockUserStatusIsOK() throws Exception {
         this.mvc.perform(get("/api/v1")).andExpect(status().isOk());
