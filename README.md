@@ -62,7 +62,7 @@ java -jar api/target/api-1.0.0-SNAPSHOT.jar
 
 ![](images/login.png)
 
-Enter demo credentials (admin/asdmin):
+Enter demo credentials (admin/admin):
 
 ![](images/home.png)
 
