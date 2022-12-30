@@ -1,4 +1,4 @@
-# JWT Auth Demo
+# Spring Security JWT + Client Auth Demo
 
 ### API based on Spring Security JWT
 
